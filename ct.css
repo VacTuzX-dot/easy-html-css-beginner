@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+  transition: all 0.1s;
+}
+* a {
+  text-decoration: none;
+}
+* li {
+  list-style: none;
+}
+@keyframes change-color {
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  25% {
+    color: rgb(255, 255, 0);
+  }
+  50% {
+    color: rgb(0, 255, 0);
+  }
+  75% {
+    color: rgb(0, 0, 255);
+  }
+  100% {
+    color: rgb(255, 0, 255);
+  }
+}
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(45%);
+}
+.menu {
+  position: relative;
+  width: 84%;
+  height: 10vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  font-size: 2.5rem;
+  color: white;
+  transition: all 0.4s;
+}
+.logo a:hover {
+  font-size: 2.5rem;
+  color: white;
+  animation: change-color 3s infinite;
+}
+.menu ul {
+  display: flex;
+  padding: 10px 0;
+  border-radius: 90px;
+  border: 2px solid #444;
+  transition: all 0.4s;
+}
+.menu ul li {
+  padding: 0 17px;
+}
+.menu ul li a {
+  font-weight: bold;
+  animation: change-color 3s infinite;
+  font-size: 14px;
+  transition: all 0.4s;
+}
+
+.content {
+  width: 85%;
+  margin: 0 auto;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.content .header,
+.grid-card {
+  width: 50%;
+  position: relative;
+}
+.content .header {
+  color: whitesmoke;
+  padding: 20px;
+}
+.content .header h3 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+.content .header h3 i {
+  font-size: 1.5rem;
+  color: red;
+  transition: all 0.4s;
+  margin-right: 10px;
+  animation: change-color 6s infinite;
+}
+.content .header h3 i:hover {
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+.content .header .cop i {
+  transform: translateX(135px) translateY(-102px);
+  font-size: 2rem;
+  transition: all 0.4s;
+  animation: change-color 6s infinite;
+}
+.content .header .cop i:hover {
+  font-size: 3rem;
+  transition: all 0.3s;
+}
+.content .header h1 {
+  font-size: 5rem;
+}
+.content .header hr {
+  width: 35rem;
+  height: 5px;
+  border-radius: 20px;
+  border: none;
+  background-color: black;
+  margin: 10px 0;
+}
+.content .header p {
+  text-shadow: 1px 1px 0px #555;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: -30px;
+}
+.grid-card {
+  color: aliceblue;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 25px;
+}
+.grid-card .box {
+  font-size: 15px;
+  width: 100%;
+  height: 230px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.content .box h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: aliceblue;
+}
+
+.content .box:hover {
+  transform: translateY(-15px);
+  transition: all 0.4s;
+}
+
+.content .grid-card .bg4 img {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  border-radius: 25px;
+  transition: all 0.4s;
+}
+.content .grid-card .bg3 img {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  border-radius: 25px;
+  transition: all 0.4s;
+}
+.content .grid-card .bg2 img {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  border-radius: 25px;
+  transition: all 0.4s;
+  transform: translateY(57px);
+}
+.content .grid-card .bg1 img {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  border-radius: 25px;
+  transition: all 0.4s;
+  transform: translateY(57px);
+}
+
+.content .grid-card .bg1 h2 {
+  transform: translateY(57px);
+}
+.content .grid-card .bg2 h2 {
+  transform: translateY(57px);
+}
